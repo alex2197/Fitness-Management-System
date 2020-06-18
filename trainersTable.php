@@ -17,7 +17,7 @@
                 <th>Email</th>
             </tr>
             <?php
-                $conn = mysqli_connect("locahost", "root", "", "fitnessmanagement");
+                $conn = mysqli_connect("localhost", "root", "", "fitnessmanagement");
                 $query = "SELECT idEntrenador, nombre, apellido, email FROM entrenador";
                 $result = $conn-> query($query);
                 if($result-> num_rows > 0)
