@@ -1,0 +1,28 @@
+header{
+    padding: 0px 10px;
+}
+
+.password-container{
+    padding: 30px 0px;
+}
+
+.signin-button{
+    padding: 20px 0px;
+}
+
+.fname-container{
+    padding: 15px 0px;
+}
+
+.lname-container{
+    padding: 15px 0px;
+}
+
+.emailr-container{
+    padding: 15px 0px;
+}
+
+
+.login-button{
+    padding: 15px 0px;
+}
