@@ -21,7 +21,6 @@
             </thead>
             <?php
                 $conn = mysqli_connect("localhost", "root", "", "fitnessmanagement");
-                $id = 0;
                 $id = $_POST["id"];
                 if(isset($_POST['delete']))
                 {
