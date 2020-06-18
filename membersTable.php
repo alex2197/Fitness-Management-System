@@ -38,6 +38,7 @@
                 if(isset($_POST['delete']))
                 {
                     $query = "DELETE FROM usuario WHERE idUsuario = '$id'";
+                    $query_run = mysqli_query($conn, $query);
                 }
             ?>
         </table>
