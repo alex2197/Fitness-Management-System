@@ -10,6 +10,10 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     </head>
     <body>
+        <form action="membersTable.php" method="post">
+            ID TO DELETE: <input type="text" name="idUsuario" required><br>
+            <input type="submit" name="delete" value="delete member">
+        </form>
         <table class="table table-striped">
             <thead>
                 <tr>
@@ -21,6 +25,7 @@
             </thead>
             <?php
                 $conn = mysqli_connect("localhost", "root", "", "fitnessmanagement");
+                $id = $_GET["idUsuario"];
                 $query = "SELECT idUsuario, nombre, apellido, email FROM usuario";
                 $result = $conn-> query($query);
                 if($result-> num_rows > 0)
@@ -31,7 +36,6 @@
                         <td>" . $row["nombre"] . "</td>
                         <td>" . $row["apellido"] . "</td>
                         <td>" . $row["email"] . "</td></tr>";
-                        $id = $_GET['idUsuario'];
                         $query = "DELETE FROM usuario WHERE idUsuario = '$id'";
                     }
                     echo "</table>";
@@ -43,9 +47,5 @@
                 $conn-> close();
             ?>
         </table>
-        <form action="membersTable.php" method="post">
-            ID TO DELETE: <input type="text" name="idUsuario" required><br>
-            <input type="submit" name="delete" value="delete member">
-        </form>
     </body>
 </html>
