@@ -32,7 +32,7 @@
                         <td>" . $row["apellido"] . "</td>
                         <td>" . $row["email"] . "</td></tr>";
                         $id = $_GET['idUsuario'];
-                        $query = "DELETE FROM usuario WHERE idUsuario = $id";
+                        $query = "DELETE FROM usuario WHERE idUsuario = '$id'";
                     }
                     echo "</table>";
                 }
