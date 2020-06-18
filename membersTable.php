@@ -30,9 +30,9 @@
                         echo "<tr><td>" . $row["idUsuario"] ."</td>
                         <td>" . $row["nombre"] . "</td>
                         <td>" . $row["apellido"] . "</td>
-                        <td>" . $row["email"] . "</td>
-                        <td><a href='delete.php?id=".$row['idUsuario']."'></a></td>
-                        </tr>";
+                        <td>" . $row["email"] . "</td></tr>";
+                        $id = $_GET['idUsuario'];
+                        $query = "DELETE FROM usuario WHERE idUsuario = $id";
                     }
                     echo "</table>";
                 }
@@ -43,11 +43,9 @@
                 $conn-> close();
             ?>
         </table>
-        <div class="removeMember-btn"></div>
-            <button type="button" class="btn btn-danger">Remove Member</button>
-        </div>
-        <div class="addMember-btn"></div>
-            <button type="button" class="btn btn-success">Add Member</button>
-        </div>
+        <form action="membersTable.php" method="post">
+            ID TO DELETE: <input type="text" name="id" required><br>
+            <input type="submit" name="delete" value="delete member">
+        </form>
     </body>
 </html>
