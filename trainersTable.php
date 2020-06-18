@@ -24,7 +24,7 @@
                 $id = $_POST["id"];
                 if(isset($_POST['delete']))
                 {
-                    $query = "DELETE FROM usuario WHERE idUsuario = '$id'";
+                    $query = "DELETE FROM entrenador WHERE idEntrenador = '$id'";
                     $query_run = mysqli_query($conn, $query);
                 }
                 $query = "SELECT idEntrenador, nombre, apellido, email FROM entrenador";
