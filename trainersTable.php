@@ -20,7 +20,7 @@
                 $conn = mysqli_connect("locahost", "root", "", "fitnessmanagement");
                 $query = "SELECT idEntrenador, nombre, apellido, email FROM entrenador";
                 $result = $conn-> query($query);
-                if($result-> num_rows < 0)
+                if($result-> num_rows > 0)
                 {
                     while($row = $result-> fetch_assoc())
                     {
