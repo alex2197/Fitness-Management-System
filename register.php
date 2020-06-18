@@ -14,7 +14,7 @@
         else
         {
             $query = "INSERT INTO usuario(email,nombre,apellido)
-                VALUES ('$emailr','$fname','$lname','$passwordr')";
+                VALUES ('$emailr','$fname','$lname')";
             $query_run = mysqli_query($conn, $query);
             echo "User register";
         }
