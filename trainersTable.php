@@ -45,7 +45,7 @@
             ?>
         </table>
         <form action="membersTable.php" method="post">
-            ID TO DELETE: <input type="hidden" name="id"><br>
+            ID TO DELETE: <input type="text" name="id"><br>
             <input type="submit" name="delete" value="delete trainer">
         </form>
     </body>
