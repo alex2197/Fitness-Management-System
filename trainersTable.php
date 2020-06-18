@@ -10,13 +10,15 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     </head>
     <body>
-        <table>
-            <tr>
-                <th>id</th>
-                <th>Nombre</th>
-                <th>Apellido</th>
-                <th>Email</th>
-            </tr>
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Apellido</th>
+                    <th scope="col">Email</th>
+                </tr>
+            </thead>
             <?php
                 $conn = mysqli_connect("localhost", "root", "", "fitnessmanagement");
                 $query = "SELECT idEntrenador, nombre, apellido, email FROM entrenador";
