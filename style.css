@@ -27,6 +27,6 @@ header{
     padding: 15px 0px;
 }
 
-table{
+table th td{
     border: 1px solid black;
 }
