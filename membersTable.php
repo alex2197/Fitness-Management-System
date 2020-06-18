@@ -21,7 +21,7 @@
             </thead>
             <?php
                 $conn = mysqli_connect("localhost", "root", "", "fitnessmanagement");
-                $id = $_GET["idUsuario"];
+                $id = $_GET["id"];
                 if(isset($_POST['delete']))
                 {
                     $query = "DELETE FROM usuario WHERE idUsuario = $id";
@@ -47,7 +47,7 @@
             ?>
         </table>
         <form action="membersTable.php" method="post">
-            ID TO DELETE: <input type="text" name="idUsuario" required><br>
+            ID TO DELETE: <input type="text" name="id" required><br>
             <input type="submit" name="delete" value="delete member">
         </form>
     </body>
