@@ -22,10 +22,6 @@
             <?php
                 $conn = mysqli_connect("localhost", "root", "", "fitnessmanagement");
                 $id = $_GET["id"];
-                if(isset($_POST['delete']))
-                {
-                    $query = "DELETE FROM usuario WHERE idUsuario = $id";
-                }
                 $query = "SELECT idUsuario, nombre, apellido, email FROM usuario";
                 $result = $conn-> query($query);
                 if($result-> num_rows > 0)
@@ -39,11 +35,10 @@
                     }
                     echo "</table>";
                 }
-                else
+                if(isset($_POST['delete']))
                 {
-                    echo "0 result";
+                    $query = "DELETE FROM usuario WHERE idUsuario = '$id'";
                 }
-                $conn-> close();
             ?>
         </table>
         <form action="membersTable.php" method="post">
