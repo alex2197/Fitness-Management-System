@@ -21,7 +21,7 @@
             </thead>
             <?php
                 $conn = mysqli_connect("localhost", "root", "", "fitnessmanagement");
-                $id = $_POST["id"];
+                $id = $_GET["id"];
                 if(isset($_POST['delete']))
                 {
                     $query = "DELETE FROM usuario WHERE idUsuario = '$id'";
