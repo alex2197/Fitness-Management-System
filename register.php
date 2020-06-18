@@ -13,8 +13,8 @@
         }
         else
         {
-            $query = "INSERT INTO usuario(email,nombre,apellido)
-                VALUES ('$emailr','$fname','$lname')";
+            $query = "INSERT INTO usuario(nombre,apellido,email)
+                VALUES ('$lname','$fname','$emailr')";
             $query_run = mysqli_query($conn, $query);
             echo "User register";
         }
