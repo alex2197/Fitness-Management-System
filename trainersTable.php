@@ -38,5 +38,11 @@
                 $conn-> close();
             ?>
         </table>
+        <div class="removeTrainer-btn"></div>
+            <button type="button" class="btn btn-danger">Remove Member</button>
+        </div>
+        <div class="addTrainer-btn"></div>
+            <button type="button" class="btn btn-success">Add Member</button>
+        </div>
     </body>
 </html>

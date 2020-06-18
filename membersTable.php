@@ -27,7 +27,12 @@
                 {
                     while($row = $result-> fetch_assoc())
                     {
-                        echo "<tr><td>" . $row["idUsuario"] ."</td><td>" . $row["nombre"] . "</td><td>" . $row["apellido"] . "</td><td>" . $row["email"] . "</td></tr>";
+                        echo "<tr><td>" . $row["idUsuario"] ."</td>
+                        <td>" . $row["nombre"] . "</td>
+                        <td>" . $row["apellido"] . "</td>
+                        <td>" . $row["email"] . "</td>
+                        <td><a href='delete.php?id=".$row['idUsuario']."'></a></td>
+                        </tr>";
                     }
                     echo "</table>";
                 }
@@ -38,5 +43,11 @@
                 $conn-> close();
             ?>
         </table>
+        <div class="removeMember-btn"></div>
+            <button type="button" class="btn btn-danger">Remove Member</button>
+        </div>
+        <div class="addMember-btn"></div>
+            <button type="button" class="btn btn-success">Add Member</button>
+        </div>
     </body>
 </html>
