@@ -10,10 +10,6 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     </head>
     <body>
-        <form action="membersTable.php" method="post">
-            ID TO DELETE: <input type="text" name="idUsuario" required><br>
-            <input type="submit" name="delete" value="delete member">
-        </form>
         <table class="table table-striped">
             <thead>
                 <tr>
@@ -47,5 +43,9 @@
                 $conn-> close();
             ?>
         </table>
+        <form action="membersTable.php" method="post">
+            ID TO DELETE: <input type="text" name="idUsuario" required><br>
+            <input type="submit" name="delete" value="delete member">
+        </form>
     </body>
 </html>
