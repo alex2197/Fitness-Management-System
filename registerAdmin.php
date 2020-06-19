@@ -1,6 +1,6 @@
 <?php
     $conn = mysqli_connect("localhost","root","","fitnessmanagement");
-    if(isset($_GET['addmember']))
+    if(isset($_GET['addadmin']))
     {
         $fname = $_GET['firstname'];
         $lname = $_GET['lastname'];
