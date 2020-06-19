@@ -24,34 +24,27 @@
                 if(isset($_POST['delete']))
                 {
                     $id = $_POST["id"];
-                    $query = "DELETE FROM entrenador WHERE idEntrenador = '$id'";
+                    $query = "DELETE FROM administrador WHERE idUsuario = '$id'";
                     $query_run = mysqli_query($conn, $query);
                 }
-                $query = "SELECT idEntrenador, nombre, apellido, email FROM entrenador";
+                $query = "SELECT idAdmin, nombre, apellido, email FROM administrador";
                 $result = $conn-> query($query);
                 if($result-> num_rows > 0)
                 {
                     while($row = $result-> fetch_assoc())
                     {
-                        echo "<tr>
-                        <td>" . $row["idEntrenador"] ."</td>
+                        echo "<tr><td>" . $row["idAdmin"] ."</td>
                         <td>" . $row["nombre"] . "</td>
                         <td>" . $row["apellido"] . "</td>
-                        <td>" . $row["email"] . "</td>
-                        </tr>";
+                        <td>" . $row["email"] . "</td></tr>";
                     }
                     echo "</table>";
                 }
-                else
-                {
-                    echo "0 result";
-                }
-                $conn-> close();
             ?>
         </table>
-        <form action="trainersTable.php" method="post">
+        <form action="adminsTable.php" method="post">
             ID TO DELETE: <input type="text" name="id"><br>
-            <input type="submit" name="delete" value="delete trainer">
+            <input type="submit" name="delete" value="delete admin">
         </form>
     </body>
 </html>
