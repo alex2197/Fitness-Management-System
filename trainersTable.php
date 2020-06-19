@@ -44,7 +44,7 @@
                 $conn-> close();
             ?>
         </table>
-        <form action="membersTable.php" method="post">
+        <form action="trainersTable.php" method="post">
             ID TO DELETE: <input type="text" name="id"><br>
             <input type="submit" name="delete" value="delete trainer">
         </form>
