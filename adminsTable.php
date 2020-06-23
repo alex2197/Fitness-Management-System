@@ -33,7 +33,8 @@
                 {
                     while($row = $result-> fetch_assoc())
                     {
-                        echo "<tr><td>" . $row["idAdmin"] ."</td>
+                        echo "<tr>
+                        <td>" . $row["idAdmin"] ."</td>
                         <td>" . $row["nombre"] . "</td>
                         <td>" . $row["apellido"] . "</td>
                         <td>" . $row["email"] . "</td></tr>";
